@@ -13,7 +13,7 @@ void solve() {
         return ;   
     }
     if(n % b == 1 && n > b) {
-        cout << "YES" << endl;
+        cout << "YES" << endl; 
         return ;
     }
     while(k <= n) {
