@@ -3,8 +3,7 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    cin >> n;
+    int n; cin >> n;
     vector<int> a(n);
     for (auto &it : a)
         cin >> it;
