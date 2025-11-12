@@ -18,21 +18,20 @@ void solve() {
         else z.push_back(b[i]);
     }
     sort(arr.begin(), arr.end());
+    sort(z.begin(), z.end());
 
-    int non_zero = -1;
+    int non_zero = 0;
     for(int i = 0; i < arr.size(); i++) {
         int val = arr[i].first, c = arr[i].second;
         auto it = mpp.lower_bound(val); 
         if(it != mpp.end()) {
-            if(it->first < c) {
-                if(it->second == 1) mpp.erase(it);
-                else it->second--;
+            if(it -> first < c) {
+                if(it -> second == 1) mpp.erase(it);
+                else it -> second--;
                 mpp[c]++;
             }  
         }     
-        else {
-            break;
-        }
+        else break;
         non_zero = i + 1;
     }
 
@@ -58,4 +57,3 @@ int main() {
     while(t--) solve();
     
 }
-    
